@@ -2,6 +2,10 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
+#include "GameObject.cpp"
+#include "ConductElectricity.cpp"
+#include "Conduct.cpp"
+
 int main(void)
 {
 
@@ -28,6 +32,14 @@ int main(void)
 	{
 		std::cout << "ERROR!" << std::endl;
 	}
+
+	ArmorEngine::GameObject gO = ArmorEngine::GameObject("whatever", 2);
+	std::cout << gO.name;
+	ArmorEngine::ConductElectricity elec(0.5f);
+	ArmorEngine::Conduct * cond = &ArmorEngine::Conduct();
+
+	
+	std::cin.get();
 
 	return 0;
 }
