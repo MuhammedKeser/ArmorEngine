@@ -7,6 +7,7 @@
 #include "Headers/GameObject.h"
 #include "Headers/ConductElectricity.h"
 #include "Headers/Conduct.h"
+#include "PxPhysicsAPI.h"
 
 int main(void)
 {
