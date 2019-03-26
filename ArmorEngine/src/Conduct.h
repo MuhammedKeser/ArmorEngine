@@ -1,2 +1,12 @@
 #pragma once
-#include "Component.cpp"
+
+#include "Component.h"
+
+namespace ArmorEngine
+{
+	class Conduct : public Component
+	{
+		public:
+			Conduct() {};
+	};
+}
