@@ -41,16 +41,17 @@ int main(void)
 	ArmorEngine::ConductElectricity elec(0.5f);
 	ArmorEngine::Conduct * cond = &elec;
 	gO.pComponents.push_back(cond);
-	
-	std::list <ArmorEngine::GameObject*> allObjects;
-	allObjects.push_back(&gO);
+
+	cond->a = 3;
 
 	while (true)
 	{
-		for (ArmorEngine::GameObject* pCurrentGameObject : allObjects)
+		
+		for (ArmorEngine::GameObject* pCurrentGameObject : ArmorEngine::GameObject::pGameObjects)
 		{
 			pCurrentGameObject->Update();
 		}
+		
 	}
 
 	
