@@ -1,7 +1,6 @@
-#include <string>
-#include <list>
-
+#include "Headers/Component.h"
 
 namespace ArmorEngine
 {
+
 }

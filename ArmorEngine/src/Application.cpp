@@ -1,11 +1,12 @@
+#pragma once
 #include <iostream>
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
+#include <list>
 
-
-#include "GameObject.cpp"
-#include "ConductElectricity.cpp"
-#include "Conduct.cpp"
+#include "Headers/GameObject.h"
+#include "Headers/ConductElectricity.h"
+#include "Headers/Conduct.h"
 
 int main(void)
 {
@@ -38,8 +39,20 @@ int main(void)
 	ArmorEngine::GameObject gO = ArmorEngine::GameObject("whatever", 2);
 	std::cout << gO.name;
 	ArmorEngine::ConductElectricity elec(0.5f);
-	ArmorEngine::Conduct * cond = &ArmorEngine::Conduct();
+	ArmorEngine::Conduct * cond = &elec;
+	gO.pComponents.push_back(cond);
 	
+	std::list <ArmorEngine::GameObject*> allObjects;
+	allObjects.push_back(&gO);
+
+	while (true)
+	{
+		for (ArmorEngine::GameObject* pCurrentGameObject : allObjects)
+		{
+			pCurrentGameObject->Update();
+		}
+	}
+
 	
 	std::cin.get();
 

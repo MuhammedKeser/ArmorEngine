@@ -32,16 +32,16 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\GameObject.h">
+    <ClInclude Include="src\Headers\GameObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Component.h">
+    <ClInclude Include="src\Headers\ConductElectricity.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Conduct.h">
+    <ClInclude Include="src\Headers\Conduct.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\ConductElectricity.h">
+    <ClInclude Include="src\Headers\Component.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
